@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class TeaCoffee {
+  
+    public static void main(String[] args) {
+       
+     Scanner input = new Scanner(System.in);
+        int choice = 0;
+        double total1=0.0;
+        double total2=0.0;
+        double total3=0.0;
+        
+       while (choice != 4)
+       {
+    System.out.println ("What would you like");
+    System.out.println ("Coffee\t\t$4.99");
+    System.out.println ("Tea\t\t$2.99");
+    System.out.println ("Smoothie\t$5.49");
+    System.out.println ("Show total and exit");
+   choice = input.nextInt();
+      switch (choice)
+       {
+           case 1:
+               System.out.println("Coffee");
+               System.out.println("How many?");
+               int product = input.nextInt();
+               total1 = product * 4.99;
+               
+               break;
+           case 2: 
+               System.out.println("Tea");
+               System.out.println("How many?");
+               int product2 = input.nextInt();
+               total2 = product2 * 2.99;
+               break;
+          case 3:
+               System.out.println("Smoothie");
+               System.out.println("How many?");
+               int product3 = input.nextInt();
+               total3 = product3 * 5.49;
+               break;
+          default: 
+               System.out.println("Exit");
+                double total = total1 + total2 + total3; 
+                System.out.println(total);
+              
+               
+               break;
+       }
+      
+       }
+    }
+}
